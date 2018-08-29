@@ -5,7 +5,8 @@ run dotnet restore api/api.csproj
 COPY /tests/tests.csproj ./tests/
 run dotnet restore tests/tests.csproj
 copy . .
-run dotnet test tests/tests.csproj
+run dotnet test --work:"myresult.xml" tests/tests.csproj
+
 
 RUN dotnet publish -o /publish
 
