@@ -1,5 +1,5 @@
 FROM microsoft/aspnetcore-build:2 as build-env
-WORKDIR /docker
+WORKDIR /dockers
 COPY /api/api.csproj ./api/
 run dotnet restore api/api.csproj
 COPY /tests/tests.csproj ./tests/
